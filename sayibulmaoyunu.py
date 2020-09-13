@@ -24,16 +24,21 @@ def oyunbaslat():
     oyunsayisi = random.randrange(0, int(sayi))
     time.sleep(1)
     print("Oyun Ayarları Bitti Hadi Başlayalım !")
-
+    i = 0
     while True:
         oyuncusayi = int(input("hadi sayıyı bul"))
+
         if oyuncusayi < oyunsayisi:
             print("Sayımız " + str(oyuncusayi) + " 'dan büyük")
+            i+=1
         elif oyuncusayi > oyunsayisi:
             print("Sayımız " + str(oyuncusayi) + " 'dan küçük")
+            i += 1
         elif oyuncusayi == oyunsayisi:
             print("K-A-Z-A-N-D-I-N")
+            print(str(i+1) + ". seferde bildin")
             time.sleep(1)
+
             break
     while True:
         karar = input("Tekrar Oynamak İstermisin E/H")
@@ -56,8 +61,3 @@ def oyunbaslat():
 
 
 oyunbaslat()
-
-
-
-
-
